@@ -3,20 +3,20 @@ export const TodoItem = ({ todo, onDeleteTodo, onToggleTodo }) => {
   return (
     <>
       <li
-        // key={todo.id}
         className="list-group-item d-flex justify-content-between"
       >
         <span
         className={`align-self-center ${(todo.done) ? 'text-decoration-line-through' : ''} `}
         onClick={() => onToggleTodo(todo.id)}
+        aria-label="span"
         >
           {todo.description}
-          {/* Item 1 */}
         </span>
 
         <button
          className="btn btn-danger"
          onClick={ () => onDeleteTodo(todo.id) }
+         aria-label="borrar"
         >
           Borrar
         </button>
@@ -67,6 +67,35 @@ export const TodoItem = ({ todo, onDeleteTodo, onToggleTodo }) => {
 //           Borrar
 //         </button>
 
+//       </li>
+//     </>
+//   );
+// };
+
+//--------------------------------------------
+
+
+// export const TodoItem = ({ todo, onDeleteTodo, onToggleTodo }) => {
+//   return (
+//     <>
+//       <li
+//         // key={todo.id}
+//         className="list-group-item d-flex justify-content-between"
+//       >
+//         <span
+//         className={`align-self-center ${(todo.done) ? 'text-decoration-line-through' : ''} `}
+//         onClick={() => onToggleTodo(todo.id)}
+//         >
+//           {todo.description}
+//           {/* Item 1 */}
+//         </span>
+
+//         <button
+//          className="btn btn-danger"
+//          onClick={ () => onDeleteTodo(todo.id) }
+//         >
+//           Borrar
+//         </button>
 //       </li>
 //     </>
 //   );

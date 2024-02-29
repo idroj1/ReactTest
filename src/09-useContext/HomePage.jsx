@@ -12,7 +12,7 @@ export const HomePage = () => {
         </h1>
         <hr/>
 
-        <pre>
+        <pre aria-label="pre1">
           {JSON.stringify( user , null, 3 )}
         </pre>
 
@@ -27,8 +27,8 @@ export const HomePage = () => {
           Establecer user
         </button>
     </>
-  )
-}
+  );
+};
 
 //----------------------------
 
